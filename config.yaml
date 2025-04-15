@@ -1,0 +1,17 @@
+cat << EOF > /etc/hysteria/config.yaml
+listen: :443
+tls:
+
+  cert: /etc/hysteria/server.crt
+  key: /etc/hysteria/server.key
+auth:
+
+  type: password
+  password: tcdlopez
+masquerade:
+
+  type: proxy
+  proxy:
+    url: https://www.google.com/
+rewriteHost: true
+EOF
